@@ -22,12 +22,7 @@ func aggregateIndex(a, b map[string]int) map[string]int {
 
 	var ret = map[string]int{}
 	for k, v := range a {
-		_, ok := a[k]
-		if ok {
-			ret[k] = a[k] + v
-		} else {
-			ret[k] = v
-		}
+		ret[k] = v
 	}
 	for k, v := range b {
 		_, ok := b[k]
